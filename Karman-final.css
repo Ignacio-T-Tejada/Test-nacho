@@ -1,0 +1,251 @@
+:root{
+  --primary-color: white;
+  --secondary-color: rgb(46, 45, 45);
+  --third-color: rgb(0, 0, 0);
+  --fourth-color: rgb(160, 74, 74);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding-top: 80px;
+}
+
+h2{
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+.container{
+  padding: 10px 250px;
+  border-top: solid 1px white;
+}
+
+.center-img{
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+/*  --  Navigation bar  --  */
+
+/*Main styling*/
+#nav-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+
+  background-color: var(--secondary-color);
+  border-bottom: solid 1px white;
+}
+
+#nav-bar ul li:hover{
+  background-color: var(--fourth-color);
+}
+
+#nav-bar ul li:hover ul li:hover{
+  background-color: var(--secondary-color);
+}
+
+a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+/*container: set to relative. 
+the dropdown will be set to absolute*/
+#nav-bar ul li{
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+}
+
+/*★★★Hide nested*/
+#nav-bar ul li ul{
+  display: none;
+}
+
+/*★★★Make hidden dropdown visible*/
+#nav-bar ul li:hover ul{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--fourth-color);
+  left: 0;
+  margin-top: 1rem;
+}
+
+#nav-bar ul li:hover ul li:hover{
+  display: block;
+}
+
+/*Width of dropdown menu items*/
+/*set the appropriate width so menu items line up vertically*/
+#nav-bar ul li:hover .drop-down-1{
+  width: 170px
+}
+
+#nav-bar ul li:hover .drop-down-2{
+  width: 100px
+}
+
+/*  --  News section  --  */
+
+#news ul li{
+  list-style: none;
+  padding: 5px 0;
+}
+
+#news ul li:hover{
+  text-decoration: underline;
+}
+
+#news a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#news{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#news span{
+  color: var(--third-color);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  padding: 3px;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+/*  --  Members section  --  */
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.row img{
+  margin: 10px 10px;
+} 
+
+.profile .row img{
+  width: 200px;
+}
+
+/*  --  Members section  --  */
+/*  --  Animation settings  */
+/*  --  couldnt give them a common class.... didnt work  */
+.rika-box, .seira-box, .nana-box, .sena-box, .yui-box, .kosame-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rika-box h2, .seira-box h2, .nana-box h2, .sena-box h2, 
+.yui-box h2, .kosame-box h2{
+  position: absolute;
+  top: 250px;
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+.rika-box:hover h2, .rika-box:hover .rika{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px blue);
+}
+
+.seira-box:hover h2, .seira-box:hover .seira{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px rgb(255, 0, 191));
+}
+
+.nana-box:hover h2, .nana-box:hover .nana{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px rgb(187, 0, 255));
+}
+
+.sena-box:hover h2, .sena-box:hover .sena{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px rgb(238, 255, 0));
+}
+
+.yui-box:hover h2, .yui-box:hover .yui{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px rgb(255, 0, 0));
+}
+
+.kosame-box:hover h2, .kosame-box:hover .kosame{
+  visibility: visible; 
+  opacity: 1; 
+  filter: drop-shadow(0px 0px 15px rgb(0, 238, 255));
+}
+
+
+
+/*  --  Events  */
+.event-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-box{
+  display: flex;
+  flex-direction: row;
+}
+
+.event span{
+  font-weight: bold;
+  font-style: italic;
+}
+
+.event img{
+  width: 250px;
+  margin-right: 20px;
+}
+
+.event-box li{
+  margin: 20px 0;
+}
+
+.event a{
+  text-decoration: underline;
+}
+
+
+
+
